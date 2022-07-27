@@ -1,29 +1,22 @@
-import Header from "./components/Header";
-import "../src/assets/css/style.css"
-import Main from "./components/Main";
-import AboutMe from "./components/AboutMe";
-import Works from "./components/Works";
-import Contact from "./components/Contact";
-import { useEffect } from "react";
 
+import { useEffect } from "react";
+import "../src/assets/css/style.css"
+import Home from "./components/Home";
+import { Route, Routes } from "react-router"
 
 function App() {
- 
- useEffect(()=>{
-  window.scrollTo(0,0)
- })
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  })
 
   return (
-    <> 
-    
-  <Header/>
-  <Main/>
-  <AboutMe/>
-  <Works/>
-  <Contact/>
+    <>
+      <Routes>
+        <Route exact path="/" element={<Home />}></Route>
+      </Routes>
+    </>
 
-  </>
-   
   );
 }
 
