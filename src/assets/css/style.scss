@@ -1,7 +1,7 @@
 // GLOBAL VARIABLES
 
 // $green: #64ffda;
-$green:yellowgreen;
+$green: yellowgreen;
 $dark-blue: #112240;
 $light-blue: #112240;
 $white: #fff;
@@ -229,7 +229,6 @@ header {
         margin-bottom: 20px;
         color: $gray;
         font-size: 20px;
-       
       }
     }
     .right {
@@ -283,6 +282,7 @@ header {
       display: flex;
       flex-direction: column;
       transition: 0.5s;
+    
       .head {
         height: 10%;
         display: flex;
@@ -292,6 +292,7 @@ header {
 
         a {
           color: $light-gray;
+          transition: 0.5s;
         }
       }
       .content {
@@ -323,6 +324,10 @@ header {
       &:hover {
         transform: translateY(-5px);
       }
+      &:hover .head a:last-of-type{
+        transform: scale(1.1);
+        color: $green;
+      }
     }
   }
 }
@@ -351,33 +356,39 @@ header {
         text-align: center;
       }
     }
-
-    .input {
+    form {
       width: 50%;
       display: flex;
-      justify-content: space-between;
+      align-items: center;
+      flex-direction: column;
 
-      input {
-        width: 48%;
-        height: 40px;
-        margin-bottom: 20px;
+      .input {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+          width: 48%;
+          height: 40px;
+          margin-bottom: 20px;
+          outline: 0;
+          background-color: transparent;
+          border: 1px solid $green;
+          color: $light-gray;
+          padding: 20px;
+        }
+      }
+      textarea {
+        width: 100%;
+        height: 200px;
         outline: 0;
-        background-color: transparent;
         border: 1px solid $green;
+        background-color: transparent;
+        margin-top: 15px;
         color: $light-gray;
         padding: 20px;
+        font-size: 18px;
       }
-    }
-    textarea {
-      width: 50%;
-      height: 200px;
-      outline: 0;
-      border: 1px solid $green;
-      background-color: transparent;
-      margin-top: 15px;
-      color: $light-gray;
-      padding: 20px;
-      font-size: 18px;
     }
   }
 }
@@ -387,19 +398,18 @@ header {
   margin-top: 100px;
   font-family: "Inconsolata";
   letter-spacing: 2px;
-  .social-media{
+  .social-media {
     display: none;
     position: relative;
     left: unset;
     bottom: unset;
-    ul{
+    ul {
       display: flex;
       align-items: center;
       justify-content: center;
-      li{
+      li {
         margin: 10px;
       }
-
     }
   }
 }
@@ -442,7 +452,7 @@ header {
   }
 }
 
-.loading{
+.loading {
   width: 100%;
   height: 100vh;
   position: fixed;
@@ -453,27 +463,23 @@ header {
   justify-content: center;
   align-items: center;
   z-index: 1000;
-  img{
+  img {
     animation: circle 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
   }
-  
 }
 
-  @keyframes circle {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
+@keyframes circle {
+  0% {
+    transform: rotate(0deg);
   }
-
-
-
+  100% {
+    transform: rotate(360deg);
+  }
+}
 
 @media screen and (max-width: 926px) {
-  .copyright{
-    .social-media{
+  .copyright {
+    .social-media {
       display: block;
     }
   }
@@ -535,10 +541,7 @@ header {
     margin-left: 0;
     .content {
       transform: translate(0);
-      .input {
-        width: 70%;
-      }
-      textarea {
+      form {
         width: 70%;
       }
     }
@@ -565,20 +568,17 @@ header {
 }
 
 @media screen and (max-width: 764px) {
-  header{
-    h1{
-      font-size: 45px!important;
-      &:last-of-type{
-        font-size: 25px!important;
+  header {
+    h1 {
+      font-size: 45px !important;
+      &:last-of-type {
+        font-size: 25px !important;
       }
     }
   }
-  .contact{
-    .input{
-      width: 90%!important;
-    }
-    textarea{
-      width: 90%!important;
+  .contact {
+    form {
+      width: 90%;
     }
   }
   .padding-x {

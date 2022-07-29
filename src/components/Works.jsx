@@ -1,6 +1,87 @@
 import React from "react";
 
 function Works() {
+  const myWorks = [
+    {
+      id: 1,
+      title: "Quiz App",
+      description:
+        " I use opentdb.com API for questions. User input name and difficulty, after questions display. Every game has 10 questions.",
+      use: ["Html", "CSS", "Javascript", "opentdb.com"],
+      github: "https://github.com/JahanaSultan/Quiz-App-Javascript.git",
+      link: "https://jahanasultan.github.io/Quiz-App-Javascript/",
+    },
+    {
+      id: 2,
+      title: "Random Hex Color",
+      description:
+        "Background color changes randomly and shows background color hex code. When clicking the stop button background stops changing..",
+      use: ["Html", "CSS", "Javascript"],
+      github: "https://github.com/JahanaSultan/Random-Hex-Color-With-Js.git",
+      link: "https://jahanasultan.github.io/Random-Hex-Color-With-Js/",
+    },
+    {
+      id: 3,
+      title: "Directone Hotel Website Template",
+      description: "Directone Hotel website, only use Html and Css.",
+      use: ["Html", "CSS"],
+      github: "https://github.com/JahanaSultan/Directone-Template.git",
+      link: "https://jahanasultan.github.io/Directone-Template/",
+    },
+    {
+      id: 4,
+      title: "Standart Javascript Calculator",
+      description: "Standart calculator project.",
+      use: ["Html", "CSS", "Javascript"],
+      github: "https://github.com/JahanaSultan/Calculator-JS.git",
+      link: "https://jahanasultan.github.io/Calculator-JS/",
+    },
+    {
+      id: 5,
+      title: "Analog Clock",
+      description:
+        "Analog watch project written with javascript and show time.",
+      use: ["Html", "CSS", "Javascript"],
+      github: "https://github.com/JahanaSultan/AnalogClock.git",
+      link: "https://jahanasultan.github.io/AnalogClock/",
+    },
+    {
+      id: 6,
+      title: "Weather App",
+      description:
+        "Weather app use data openweather.com API. Search any city and see the result",
+      use: ["Html", "CSS", "Javascript", "openweather.com"],
+      github: "https://github.com/JahanaSultan/Weather-App.git",
+      link: "https://jahanasultan.github.io/Weather-App/",
+    },
+    {
+      id: 7,
+      title: "Student Performance System",
+      description:
+        "This system has 3 login buttons: teacher, student, and admin. Students can see your information and marks, teachers know the group and group students. Add and update the mark. Admin can add teacher, student, lesson, and group.",
+      use: ["Python", "Tkinter", "Sqlite"],
+      github:
+        "https://github.com/JahanaSultan/Tkinter-Student-Managment-with-Sqlite3.git",
+      link: "",
+    },
+    {
+      id: 8,
+      title: "Unbeatable TicTacToe",
+      description:
+        "I use python Tkinter to visualize this game. This game has 2 play types: single players and 2 players. The single-player type has 2 difficulty levels: intermediate and advanced. Advanced level I use minimax algorithm and advance mode unbeatable.",
+      use: ["Python", "Tkinter"],
+      github: "https://github.com/JahanaSultan/TicTakToe.git",
+      link: "",
+    },
+    {
+      id: 9,
+      title: "Hangman Game",
+      description: "Simple Hangman Game with Python",
+      use: ["Python"],
+      github: "https://github.com/JahanaSultan/HangMan.git",
+      link: "",
+    },
+  ];
   return (
     <>
       <section className="works padding-x" id="works">
@@ -10,283 +91,41 @@ function Works() {
           </h1>
         </div>
         <div className="boxes">
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/Quiz-App-Javascript.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://jahanasultan.github.io/Quiz-App-Javascript/"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
+          {myWorks.map((e, i) => (
+            <div className="box" key={i}>
+              <div className="head">
+                <i className="fa-regular fa-folder"></i>
+                <a href={e.github} target="_blank" rel="noreferrer noopener">
+                  <i className="fa-brands fa-github"></i>
+                </a>
+                {e.link ? (
+                  <a target="_blank" rel="noreferrer noopener" href={e.link}>
+                    <i className="fa-solid fa-arrow-up-right-from-square"></i>
+                  </a>
+                ) : (
+                  ""
+                )}
+              </div>
+              <div className="content">
+                <a
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  href={e.link ? e.link : e.github}
+                >
+                  {" "}
+                  <h2>{e.title}</h2>
+                </a>
+                <p>{e.description}</p>
+              </div>
+              <div className="use">
+                <ul>
+                  {e.use.map((a, j) => (
+                    <li key={j}>{a}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
-            <div className="content">
-              <h2>Quiz App</h2>
-              <p>
-                I use opentdb.com API for questions. User input name and
-                difficulty, after questions display. Every game has 10
-                questions.{" "}
-              </p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Html</li>
-                <li>Css</li>
-                <li>Javascript</li>
-                <li>opentdb.com</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/Random-Hex-Color-With-Js.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://jahanasultan.github.io/Random-Hex-Color-With-Js/"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div className="content">
-              <h2>Random Hex Color</h2>
-              <p>
-              Background color changes randomly and shows background color hex code. When clicking the stop button background stops changing.{" "}
-              </p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Html</li>
-                <li>Css</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-          </div>
-
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/Calculator-JS.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://jahanasultan.github.io/Calculator-JS/"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div className="content">
-              <h2>Calculator with JS</h2>
-              <p>Standart calculator project.</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Html</li>
-                <li>Css</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-          </div>
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/Directone-Template.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://jahanasultan.github.io/Directone-Template/"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div className="content">
-              <h2>Directone Hotel webSite Template</h2>
-              <p>Directone Hotel website, only use Html and Css.</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Html</li>
-                <li>Css</li>
-              </ul>
-            </div>
-          </div>
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/AnalogClock.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://jahanasultan.github.io/AnalogClock/"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div className="content">
-              <h2>Analog Watch</h2>
-              <p>Analog watch project written with javascript and show time.</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Html</li>
-                <li>Css</li>
-                <li>Javascript</li>
-              </ul>
-            </div>
-          </div>
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/Weather-App.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-              <a
-                target="_blank"
-                rel="noreferrer noopener"
-                href="https://jahanasultan.github.io/Weather-App"
-              >
-                <i className="fa-solid fa-arrow-up-right-from-square"></i>
-              </a>
-            </div>
-            <div className="content">
-              <h2>Weather App</h2>
-              <p>Weather app use data openweather.com API. Search any city and see the result</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Html</li>
-                <li>Css</li>
-                <li>Javascript</li>
-                <li>openweather.com</li>
-              </ul>
-            </div>
-          </div>
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/TicTakToe.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-             
-            </div>
-            <div className="content">
-              <h2>Unbeatable TicTacToe</h2>
-              <p>I use python Tkinter to visualize this game. This game has 2 play types: single players and 2 players. The single-player type has 2 difficulty levels: intermediate and advanced. Advanced level I use minimax algorithm and advance mode unbeatable.</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Python</li>
-                <li>Tkinter</li>
-              </ul>
-            </div>
-          </div>
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/Tkinter-Student-Managment-with-Sqlite3.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-             
-            </div>
-            <div className="content">
-              <h2>Student Performance System</h2>
-              <p>This system has 3 login buttons: teacher, student, and admin. Students can see your information and marks, teachers know the group and group students. Add and update the mark. Admin can add teacher, student, lesson, and group.</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Python</li>
-                <li>Tkinter</li>
-                <li>SQLite</li>
-              </ul>
-            </div>
-          </div>
-          <div className="box">
-            <div className="head">
-              <i className="fa-regular fa-folder"></i>
-              <a
-                href="https://github.com/JahanaSultan/HangMan.git"
-                target="_blank"
-                rel="noreferrer noopener"
-              >
-                {" "}
-                <i className="fa-brands fa-github"></i>
-              </a>{" "}
-             
-            </div>
-            <div className="content">
-              <h2>Hangman</h2>
-              <p>Simple Hangman Game</p>
-            </div>
-            <div className="use">
-              <ul>
-                {" "}
-                <li>Python</li>
-
-              </ul>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </>
