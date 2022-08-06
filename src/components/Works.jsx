@@ -3,6 +3,15 @@ import React from "react";
 function Works() {
   const myWorks = [
     {
+      id: 10,
+      title: "TravelGo",
+      description:
+        "TravelGo helps travel companies to sell tours, and at the same time, it is possible to obtain the necessary materials for travel from the market section.",
+      use: ["React", "Redux", "Firebase"],
+      github: "",
+      link: "https://travelgotourism.netlify.app",
+    },
+    {
       id: 1,
       title: "Quiz App",
       description:
@@ -80,7 +89,7 @@ function Works() {
       use: ["Python"],
       github: "https://github.com/JahanaSultan/HangMan.git",
       link: "",
-    },
+    }
   ];
   return (
     <>
@@ -95,9 +104,9 @@ function Works() {
             <div className="box" key={i}>
               <div className="head">
                 <i className="fa-regular fa-folder"></i>
-                <a href={e.github} target="_blank" rel="noreferrer noopener">
+                {e.github?(<a href={e.github} target="_blank" rel="noreferrer noopener">
                   <i className="fa-brands fa-github"></i>
-                </a>
+                </a>):""}
                 {e.link ? (
                   <a target="_blank" rel="noreferrer noopener" href={e.link}>
                     <i className="fa-solid fa-arrow-up-right-from-square"></i>
