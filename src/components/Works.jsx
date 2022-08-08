@@ -89,6 +89,14 @@ function Works() {
       use: ["Python"],
       github: "https://github.com/JahanaSultan/HangMan.git",
       link: "",
+    },
+    {
+      id: 11,
+      title: "NoteApp",
+      description: "Note app for note taking. API was written using the Django Rest Framework. It is possible to add, delete and update notes",
+      use: ["Python","Django","DRF", "React"],
+      github: "https://github.com/JahanaSultan/NoteApp.git",
+      link: "",
     }
   ];
   return (
