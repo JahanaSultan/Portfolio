@@ -765,7 +765,7 @@ header h1:first-of-type {
   header h1:last-of-type {
     font-size: 25px !important;
   }
-  .contact form {
+  .contact .content form {
     width: 90%;
   }
   .padding-x {

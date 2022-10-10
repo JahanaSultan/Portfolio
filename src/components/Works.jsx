@@ -11,6 +11,16 @@ function Works() {
       github: "",
       link: "https://travelgotourism.netlify.app",
     },
+    ,
+    {
+      id: 12,
+      title: "Rembini E-Commerce",
+      description:
+        "The site of the store that sells men's accessories.",
+      use: ["Html", "CSS", "Javascript"],
+      github: "https://github.com/JahanaSultan/Rembini",
+      link: "https://jahanasultan.github.io/Rembini/",
+    },
     {
       id: 1,
       title: "Quiz App",
@@ -20,14 +30,14 @@ function Works() {
       github: "https://github.com/JahanaSultan/Quiz-App-Javascript.git",
       link: "https://jahanasultan.github.io/Quiz-App-Javascript/",
     },
+    ,
     {
-      id: 2,
-      title: "Random Hex Color",
-      description:
-        "Background color changes randomly and shows background color hex code. When clicking the stop button background stops changing..",
-      use: ["Html", "CSS", "Javascript"],
-      github: "https://github.com/JahanaSultan/Random-Hex-Color-With-Js.git",
-      link: "https://jahanasultan.github.io/Random-Hex-Color-With-Js/",
+      id: 11,
+      title: "NoteApp",
+      description: "Note app for note taking. API was written using the Django Rest Framework. It is possible to add, delete and update notes",
+      use: ["Python","Django","DRF", "React"],
+      github: "https://github.com/JahanaSultan/NoteApp.git",
+      link: "",
     },
     {
       id: 3,
@@ -83,20 +93,13 @@ function Works() {
       link: "",
     },
     {
-      id: 9,
-      title: "Hangman Game",
-      description: "Simple Hangman Game with Python",
-      use: ["Python"],
-      github: "https://github.com/JahanaSultan/HangMan.git",
-      link: "",
-    },
-    {
-      id: 11,
-      title: "NoteApp",
-      description: "Note app for note taking. API was written using the Django Rest Framework. It is possible to add, delete and update notes",
-      use: ["Python","Django","DRF", "React"],
-      github: "https://github.com/JahanaSultan/NoteApp.git",
-      link: "",
+      id: 2,
+      title: "Random Hex Color",
+      description:
+        "Background color changes randomly and shows background color hex code. When clicking the stop button background stops changing..",
+      use: ["Html", "CSS", "Javascript"],
+      github: "https://github.com/JahanaSultan/Random-Hex-Color-With-Js.git",
+      link: "https://jahanasultan.github.io/Random-Hex-Color-With-Js/",
     }
   ];
   return (
