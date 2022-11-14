@@ -18,7 +18,7 @@ function Works() {
         "yemake.com food blog. All users can share blog and recipe. Users can add recipe to recipe book, like and add comment",
       use: ["Html", "CSS", "Javascript", "Django", "Postgresql"],
       github: "",
-      link: "https://yemake.com/",
+      link: "https://www.yemake.com/",
     },
     {
       id: 12,
